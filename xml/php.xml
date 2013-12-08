@@ -5412,10 +5412,12 @@ Changes:
     </list>
 
     <contexts>
+      <!-- Remove start context to enable php highlighting without <?*
       <context name="start" lineEndContext="#stay" attribute="Normal Text">
         <RegExpr context="phpsource" attribute="Keyword" String="&lt;\?(?:=|php)?" insensitive="true" />
         <StringDetect attribute="Keyword" context="#pop" String="?&gt;" />
       </context>
+      -->
       <context name="phpsource" attribute="PHP Text" lineEndContext="#stay">
         <DetectSpaces />
         <StringDetect attribute="Keyword" context="#pop" String="?&gt;" lookAhead="true" />
